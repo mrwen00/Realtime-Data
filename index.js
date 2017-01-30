@@ -1,8 +1,8 @@
 var express = require('express');
-
+var path = require('path');
 var app = express();
-app.use('/', express.static('../app/'));
-app.use('/bower_components', express.static('../bower_components/'));
+app.use('/', express.static(path.join(__dirname + '/app/')));
+app.use('/bower_components', express.static(path.join(__dirname + '/bower_components/')));
 
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -17,6 +17,10 @@ var tickets = [
     'desc': 'RealTime App helps you to resolve sharing text, code, \nlink between multiple computers in LAN\nYou just access the localhost and enjoy.'
   },
 ];
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname + '/app/index.html'));
+});
 
 app.get('/tickets', function (req, res) {
   'use strict';
