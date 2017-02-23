@@ -6,6 +6,9 @@ When you want to send code, link or text ... quickly to your partner in Local Ne
 
 Written by Node js. So it may be inconvenient to people who don't use, have to install to use. But if you're a Node js developer, hope it will help you much.
 
+I forked from https://github.com/pairedprogrammers/demo-realtime-tickets I’ve changed something from the original version to make it more comfortable to use.
+
+
 # How to setup & use it?
 ```
     - Install Node js framework from https://nodejs.org/en/
